@@ -8,7 +8,7 @@ use std::fs;
 
 fn main () {
     let args: Vec<String> = env::args().collect();
-    dbg!(&args);
+    //dbg!(&args);
     if args.len() < 3 {
         panic!("Didn't supply two files! Or didnt provide enough gibberish to fool me otherwise!")
     }
@@ -16,8 +16,6 @@ fn main () {
     let f1num = load_file_to_string(&args[1]);
     let f2num = load_file_to_string(&args[2]);
     let sum = (f1num + f2num).to_string(); //not using vars again, no address
-    println!("Good job! You provided valid files! I'm surprised you actually listened for once.");
-    
     println!("{f2num} + {f1num}");
 
     println!("Making Result File (resfile) with sum of files provided (Really hard work!)");
