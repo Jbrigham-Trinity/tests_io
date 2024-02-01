@@ -37,6 +37,15 @@ fn load_file_to_string (f: &String) -> i32 {
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn basic() {
+        let f1 = "src/test1.txt".to_string();
+        let f2 = "src/test2.txt".to_string();
+        let t1 = load_file_to_string(&f1);
+        let t2 = load_file_to_string(&f2);
+        assert_eq!(t1, 2);
+        assert_eq!(t2,3);
+    }
     
     
 }
